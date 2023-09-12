@@ -38,7 +38,8 @@ static sortList(List<User> users) {
 }
 
 static List<User> readDataFromUrl() {
-    def data = 'https://eltex-co.ru/test/users.php'.toURL().text
+    String url = "https:/url-example"
+    def data = url.toURL().text
 
     ObjectMapper objectMapper = new ObjectMapper()
     List<User> users = objectMapper.readValue(data.toString(), List<User>.class)
